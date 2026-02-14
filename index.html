@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DUGO — Bloodline</title>
+  <meta name="description" content="DUGO. Minimal streetwear built around one symbol: the Bloodline." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- texture -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- BLOOD CANVAS (scroll-driven drip, not a fill bar) -->
+  <div class="spine" aria-hidden="true">
+    <canvas id="bloodCanvas"></canvas>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="DUGO Home">
+      <span class="dot"></span>
+      <span class="word">DUGO</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#drop">Drop 01</a>
+      <button class="navBtn" id="openLookbook" type="button">Lookbook</button>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div class="heroLeft">
+  <div class="logoBleed">
+    <img src="dugo-logo.png" alt="DUGO" class="logo">
+    <span class="logoText" aria-hidden="true">DUGO</span>
+  </div>
+
+  <p class="kicker">Born Davao. Built back. <span class="ox">Bloodline</span></p>
+
+  <p class="fine">
+    Minimal form. Concrete palette. One mark that carries the story through the body.
+  </p>
+</div>
+
+        <div class="heroRight">
+          <figure class="frame">
+            <img src="tanktop-redline.png" alt="DUGO tanktops with oxblood bloodline" />
+            <figcaption>
+              <span>DROP 01</span><span class="sep">/</span><span>CABANTIAN</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY (cards never sit under blood because gutter in middle) -->
+    <section id="story" class="section">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="rough">Two places. One body.</h2>
+          <p class="sub">
+            DUGO is for people who carry the place they came from — and the place they became — at the same time.
+          </p>
+        </header>
+
+        <div class="timeline">
+          <article class="card left" data-reveal>
+            <div class="tag">ORIGIN</div>
+            <h3>Return is a material.</h3>
+            <p>
+              Cabantian isn’t a moodboard. It’s heat, dust, unfinished hollow-block walls.
+              DUGO translates that texture into clothing.
+            </p>
+          </article>
+
+          <article class="card right" data-reveal>
+            <div class="tag">INTENT</div>
+            <h3>Quiet confidence.</h3>
+            <p>
+              No loud graphics. No noise. The identity is carried by one mark — recognizable at distance.
+            </p>
+          </article>
+
+          <article class="card left" data-reveal>
+            <div class="tag">MODEL</div>
+            <h3>Limited drops — like chapters.</h3>
+            <p>
+              Each release is small, documented, time-stamped. The story moves forward with every drop.
+            </p>
+          </article>
+
+          <article class="card right" data-reveal>
+            <div class="tag">SIGNATURE</div>
+            <h3>The Bloodline.</h3>
+            <p>
+              A single vertical oxblood line. Not gore. Not a logo. A mark of lineage and identity.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DROP -->
+    <section id="drop" class="section">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="rough">Drop 01 — Cabantian</h2>
+          <p class="sub">
+            Washed black sleeveless cut, built for heat and movement. The first chapter carries the mark.
+          </p>
+        </header>
+
+        <div class="productRow">
+          <div class="mediaCard" data-reveal>
+            <img src="tanktop-redline.png" alt="Drop 01 Tanktops" />
+          </div>
+
+          <div class="infoCard" data-reveal>
+            <div class="pills">
+              <span class="pill">LIMITED</span>
+              <span class="pill ox">OXBLOOD LINE</span>
+              <span class="pill">WASHED BLACK</span>
+            </div>
+
+            <div class="spec">
+              <div><span>Signature</span><span>Oxblood bloodline (top → hem)</span></div>
+              <div><span>World</span><span>Concrete / dust / heat</span></div>
+              <div><span>Drop model</span><span>Small quantity, chapter release</span></div>
+            </div>
+
+            <div class="cta">
+              <button class="btn primary" id="openLookbook3" type="button">See Lookbook</button>
+              <a class="btn ghost" href="#contact">Get notified</a>
+            </div>
+
+            <p class="fine">Replace mockups with real Cabantian photos when you shoot the hollow-block houses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dense">
+      <div class="wrap split">
+        <div class="cardWide" data-reveal>
+          <h2 class="rough">Stay close to the line</h2>
+          <p class="sub">Drop alerts. No spam. Just the next chapter.</p>
+
+          <div class="form">
+            <label>
+              <span>Email</span>
+              <input id="email" type="email" placeholder="you@email.com" />
+            </label>
+            <button class="btn primary" id="notifyBtn" type="button">Notify me</button>
+            <p class="fine" id="notifyMsg"></p>
+          </div>
+        </div>
+
+        <div class="sideCard" data-reveal>
+          <div class="tag">SUMMARY</div>
+          <p class="sub" style="margin-top:10px">
+            DUGO is minimal streetwear built around one symbol — the Bloodline — a mark of origin and identity.
+          </p>
+          <div class="divider"></div>
+          <div class="links">
+            <a href="#home">Top</a>
+            <a href="#drop">Drop 01</a>
+            <button class="linkBtn" id="openLookbook4" type="button">Lookbook</button>
+          </div>
+          <p class="fine">© <span id="year"></span> DUGO — concept page.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LOOKBOOK MODAL -->
+  <div class="modal" id="lookbookModal" aria-hidden="true" role="dialog" aria-label="Lookbook">
+    <div class="modal__backdrop" id="closeLookbook"></div>
+
+    <div class="modal__panel" role="document">
+      <div class="modal__top">
+        <div class="modal__title">
+          <span class="dot"></span>
+          <span>LOOKBOOK</span>
+          <span class="sep">/</span>
+          <span class="muted">Hollow Blocks</span>
+        </div>
+        <button class="x" id="closeLookbook2" aria-label="Close lookbook">×</button>
+      </div>
+
+      <div class="modal__grid" id="lookbookGrid">
+        <!-- JS inserts images here -->
+      </div>
+
+      <div class="modal__hint">
+        Add your photos to <code>/lookbook/</code> and update the list in <code>app.js</code>.
+      </div>
+    </div>
+  </div>
+
+  <!-- fullscreen image viewer -->
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="viewer__backdrop" id="viewerClose"></div>
+    <img id="viewerImg" alt="Lookbook image" />
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
